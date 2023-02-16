@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { 
   createBrowserRouter,
@@ -13,6 +12,7 @@ import {
  import Admin from './pages/Admin';
  import Navbar from './components/Navbar';
  import Footer from './components/Footer';
+ import "./styles.scss";
 
 // Outlet permet aux routes de faire le rendu
 // de leur élement enfant
@@ -73,7 +73,7 @@ import {
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <div className="container">
         {/* route racin, toute les routes passe a l'interieur */}
         <RouterProvider router={router} />
