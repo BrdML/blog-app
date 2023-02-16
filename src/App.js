@@ -14,6 +14,11 @@ import {
  import Navbar from './components/Navbar';
  import Footer from './components/Footer';
 
+// Outlet permet aux routes de faire le rendu
+// de leur élement enfant
+// Layout est une route parent sans path, 
+// utilisé exclusivement pour grouper les route enfants
+// dans un layout specifique.
  const Layout = () => {
   return (
     <>
@@ -35,7 +40,7 @@ import {
         element:<Home />
       },
       {
-        path:"/single",
+        path:"/post/:id",
         element:<Single />
       },
       {
@@ -69,8 +74,10 @@ import {
 function App() {
   return (
     <div className="App">
-      {/* route racin, toute les routes passe a l'interieur */}
-      <RouterProvider router={router} />
+      <div className="container">
+        {/* route racin, toute les routes passe a l'interieur */}
+        <RouterProvider router={router} />
+      </div>
     </div>
   );
 }
