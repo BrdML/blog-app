@@ -2,7 +2,6 @@ import './App.css';
 import { 
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
  } from 'react-router-dom';
  import Register from './pages/Register';
@@ -12,6 +11,7 @@ import {
  import Admin from './pages/Admin';
  import Navbar from './components/Navbar';
  import Footer from './components/Footer';
+ import BlogPost from './pages/adminPages/BlogPost';
  import "./styles.scss";
 
 // Outlet permet aux routes de faire le rendu
@@ -47,6 +47,10 @@ import {
         path:"/admin",
         element:<Admin />
       },
+      {
+        path:"/blogpost",
+        element:<BlogPost />
+      },
     ]
   },
   {
@@ -69,13 +73,17 @@ import {
     path: "/admin",
     element: <Admin/>,
   },
+  {
+    path:"/blogpost",
+    element:<BlogPost />
+  },
 ]);
 
 function App() {
   return (
     <div className="app">
       <div className="container">
-        {/* route racin, toute les routes passe a l'interieur */}
+        {/* route racine, toute les routes passe a l'interieur */}
         <RouterProvider router={router} />
       </div>
     </div>

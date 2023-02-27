@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Edit from '../images/editer.png';
-import Delete from '../images/delete.png'
+import Delete from '../images/delete.png';
+import Menu from '../components/Menu';
 
 const Single = () => {
   return (
@@ -56,7 +57,7 @@ const Single = () => {
           facilis, quaerat totam laborum rerum corrupti?
           </p>
       </div>
-      <div className="menu">m</div>
+      <Menu />
     </div>
   )
 }
