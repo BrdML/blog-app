@@ -1,8 +1,18 @@
-import React from 'react'
+import React from 'react';
+import AdminMenu from '../components/AdminMenu';
+
 
 const Admin = () => {
+
   return (
-    <div>Admin</div>
+    <div className='admin'>
+      <div className="sidemenu">
+        < AdminMenu />
+      </div>
+      <div className="adminContent">
+
+      </div>
+    </div>
   )
 }
 

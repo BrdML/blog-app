@@ -198,7 +198,6 @@ $lightGreen : #b9e7e7;
         }
 
         //Single
-
         .single{
             display: flex;
             gap: 50px;
@@ -258,6 +257,137 @@ $lightGreen : #b9e7e7;
                 flex: 2;
             }
         }
+
+        //Menu
+        .menu{
+            flex:2;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            h3{
+                font-size: 15px;
+                color: #128383 !important;
+            }
+
+            .post{
+               display: flex;
+               flex-direction: column;
+               gap: 10px;
+
+               img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+               }
+
+               h2{
+                color: #128383;
+               }
+
+               button{
+                width: max-content;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                background-color: white;
+                border: 1px solid teal;
+                color: teal;
+
+                &:hover{
+                    border: 1px solid white;
+                    background-color: $lightGreen;
+                    color: black;
+
+                }
+            }
+
+            }
+        }
+
+        //Admin
+        .admin{
+            margin-top: 20px;
+            display: flex;
+            // gap: 20px;
+
+            .sidemenu{
+                width: 20%;
+            }
+
+            .content{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input{
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                }
+
+                .editorContainer{
+                    height: 40vh;
+                    border: 1px solid lightgray;
+
+                    .quill{
+                        height: 100%;
+                        border: none;
+                    }
+                }
+            }
+
+            .menu{
+                flex:2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                item{
+                    border: 1px solid lightgray; 
+                    padding: 10px;
+                }
+            }
+        }
+
+        // adminNav
+        .adminmenu{
+            background-color: #128383;
+            width: 100%;
+            height: 100vh;
+            color: white;
+
+            .contentmnu{
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        // Blogpost
+        .blogPosts{
+            display: flex;
+            width: 100%;
+
+            .contentblog{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+
+                .containermnu{
+                    width: 20%;
+                    display: flex;
+                }
+
+                .contentedit{
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .menu{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
     }
 }
-// 37:16
