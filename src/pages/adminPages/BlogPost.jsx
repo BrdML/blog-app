@@ -17,21 +17,21 @@ function BlogPost() {
             <div className="content">
                 <input type="text" placeholder='Titre'/>
                 <div className="editorContainer">
-                <ReactQuill theme="snow" value={value} onChange={setValue} />
+                <ReactQuill className='editor' theme="snow" value={value} onChange={setValue} />
                 </div>
             </div>
         </div>
         <div className="menu">
-                <div className="item">
-                    <h1>Publier</h1> Brouillon
+                <div className="item first">
+                    <h1>Publier</h1> 
                     <span>
-                    <b>Visibilité:</b> Public
+                        <b>Visibilité:</b> Public
                     </span>
                     <span>
-                    <b>Status:</b>
+                        <b>Status:</b> Brouillon
                     </span>
                     <input style={{display:"none"}} type="file" name='' id='file'/>
-                    <label htmlFor="file">Téléchatger une image</label>
+                    <label className='file' htmlFor="file">Téléchatger une image</label>
                     <div className="buttons">
                         <button>Enregistrer le brouillon</button>
                         <button>Modifier</button>
@@ -39,14 +39,14 @@ function BlogPost() {
                 </div>
                 <div className='item'>
                     <h1>Categories</h1>
-                    <input type="radio" name='cat' value="actus" id="actus"/>
                     <label htmlFor="actus">Actus</label>
-                    <input type="radio" name='cat' value="dev" id="dev"/>
+                    <input type="radio" name='cat' value="actus" id="actus"/>
                     <label htmlFor="dev">Dev</label>
-                    <input type="radio" name='cat' value="tech" id="tech"/>
+                    <input type="radio" name='cat' value="dev" id="dev"/>
                     <label htmlFor="tech">Tech</label>
-                    <input type="radio" name='cat' value="astuces" id="astuces"/>
+                    <input type="radio" name='cat' value="tech" id="tech"/>
                     <label htmlFor="astuces">Astuces</label>
+                    <input type="radio" name='cat' value="astuces" id="astuces"/>
                 </div>
             </div>
         </div>
